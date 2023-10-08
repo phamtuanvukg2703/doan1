@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 3em;
+    color:rgb(255, 255, 255)
+}
+img{
+    width: 1473px;
+    height: 650px;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 5px solid #6f95ec;
+    align-items: center;
+    background-color: rgb(135, 99, 44);
+}
+a{
+    text-decoration: none;
+    color: white;
+    border: 5px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:  rgb(48, 113, 127);
+}
+
