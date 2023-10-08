@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Phòng Thực Hành</title>
+    <link rel="stylesheet" href="../css/qlmuonphong.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "main">
+        <div class = "title">
+            <h2>Quản Lý Phòng Thực Hành</h2>
+        </div>
+        <div class = search-add>
+            <div class = "search">
+                <input type="text" name="searchip" id="searchip" placeholder="Nhập mã phòng">
+                <button onclick="searchfunction()">Tìm Kiếm</button>
+            </div>
+            <div id = "searchResults">
+            <!--Kết quả tìm kiếm sẽ được hiển thị  -->
+            </div>
+            <script src="../../javacript/script.js"></script>
+            <div class = "add">
+                <button id="into-add-phong">Thêm phòng mới</button>
+                <script src="../../javascript/btn_into_add_phong.js"></script>
+            </div>
+        </div>
+        <div class = "container">
+            <h3>Danh sách các phòng thực hành</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã khu</th>
+                        <th>Mã phòng</th>
+                        <th>Tên phòng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--php vòng lặp for để xét mảng và điều kiện ví dụ ko có dữ liệu else sẽ in ra ko có khu-->
+                    <tr>
+                        <td>123213<!--dữ liệu từ sql mã khu ở đây sẽ có khóa ngoại xóa khu sẽ bay cái này luôn--></td>
+                        <td>312ádasrsdfefwerwe<!--dữ liệu từ sql mã phòng--></td>
+                        <td>312321<!--dữ liệu từ sql tên phòng--></td>
+                        <td><button class ="btnSua">Sửa</button></td>
+                        <td><button class ="btnXoa">Xóa</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <script src="../../javascript/btn_sua_xoa_phong.js"></script>
+        </div>
+    </div>
+</body>
+</html>

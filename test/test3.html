@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <tbody class="divide-y divide-gray-300">
+            {% for phieu in danhsachphieu %}
+                <tr class="hover:bg-slate-100">
+                    <td>{{ phieu.Phieu }}</td>
+                    <td>{{ phieu.Mabai }}</td>
+                    <td class="inline-flex rounded-md shadow-sm divide-x-2">
+                        <a href="{{ req.baseUrl }}/detail/{{ phieu.Phieu }}" class="bg-white px-4 py-2 hover:bg-gray-200 rounded-l-lg">Xem chi tiết</a>
+                        <a href="{{ req.baseUrl }}/detail/{{ phieu.Phieu }}" class="bg-white px-4 py-2 hover:bg-gray-200">Sửa</a>
+                        <a href="#" class="bg-white px-4 py-2 hover:bg-gray-200 rounded-r-lg">Xoá</a>
+                    </td>
+                </tr>
+    </div>
+</body>
+</html>

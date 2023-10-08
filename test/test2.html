@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách với nút Sửa và Xóa</title>
+</head>
+<body>
+    <h1>Danh sách mục</h1>
+    
+    <!-- Danh sách mục -->
+    <ul id="danhSach">
+        <li>Mục 1 <button class="btnSua">Sửa</button> <button class="btnXoa">Xóa</button></li>
+        <li>Mục 2 <button class="btnSua">Sửa</button> <button class="btnXoa">Xóa</button></li>
+        <li>Mục 3 <button class="btnSua">Sửa</button> <button class="btnXoa">Xóa</button></li>
+    </ul>
+
+    <script>
+        // Đây là ví dụ JavaScript cơ bản để xử lý sự kiện khi các nút "Sửa" và "Xóa" được nhấn.
+        // Bạn có thể thay đổi mã này để thực hiện các chức năng cụ thể của mình.
+
+        // Lấy danh sách các nút "Sửa" và "Xóa"
+        var btnSuaList = document.getElementsByClassName("btnSua");
+        var btnXoaList = document.getElementsByClassName("btnXoa");
+
+        // Xử lý sự kiện khi các nút "Sửa" được nhấn
+        for (var i = 0; i < btnSuaList.length; i++) {
+            btnSuaList[i].addEventListener("click", function() {
+                var li = this.parentElement; // Lấy tham chiếu đến phần tử li cha của nút "Sửa"
+                var tenMuc = li.firstChild.textContent.trim(); // Lấy nội dung của mục
+                alert("Sửa mục: " + tenMuc);
+                // Thêm mã xử lý cho chức năng Sửa ở đây
+            });
+        }
+
+        // Xử lý sự kiện khi các nút "Xóa" được nhấn
+        for (var i = 0; i < btnXoaList.length; i++) {
+            btnXoaList[i].addEventListener("click", function() {
+                var li = this.parentElement; // Lấy tham chiếu đến phần tử li cha của nút "Xóa"
+                var tenMuc = li.firstChild.textContent.trim(); // Lấy nội dung của mục
+                if (confirm("Xóa mục: " + tenMuc + "?")) {
+                    li.remove(); // Xóa phần tử li khỏi danh sách
+                    // Thêm mã xử lý cho chức năng Xóa ở đây
+                }
+            });
+        }
+    </script>
+</body>
+</html>

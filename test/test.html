@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý người dùng</title>
+</head>
+<body>
+    <h1>Danh sách người dùng</h1>
+    <ul id="userList">
+        <!-- Danh sách người dùng sẽ được hiển thị ở đây -->
+    </ul>
+
+    <h2>Thêm người dùng</h2>
+    <form id="addUserForm">
+        <input type="text" id="username" placeholder="Tên người dùng" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Thêm</button>
+    </form>
+
+    <h2>Sửa người dùng</h2>
+    <form id="editUserForm">
+        <input type="hidden" id="userId">
+        <input type="text" id="editUsername" placeholder="Tên người dùng" required>
+        <input type="email" id="editEmail" placeholder="Email" required>
+        <button type="submit">Lưu</button>
+    </form>
+
+    <h2>Xóa người dùng</h2>
+    <form id="deleteUserForm">
+        <input type="text" id="deleteUserId" placeholder="ID người dùng" required>
+        <button type="submit">Xóa</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

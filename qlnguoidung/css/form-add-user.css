@@ -1,0 +1,46 @@
+html{
+    background-image: url(../../png/form.jpg);
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: solid;
+    font-size: 2em;
+}
+
+.container > div {
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    border: solid;
+    background-color: white;
+    border-radius: 50px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.container div input{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+.container > form {
+    padding: 3em 5em;
+}
+
+.sm_dk > button{
+    display:block;
+    margin: 0 auto;
+    border-radius: 11px;
+    padding: 15px;
+    cursor: pointer;
+}
