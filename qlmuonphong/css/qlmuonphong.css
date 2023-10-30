@@ -85,6 +85,6 @@ td {
     width: 400px;
     height: 36px;
 }
-a{
+.main > a {
     text-decoration: none;
 }

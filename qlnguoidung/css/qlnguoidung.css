@@ -1,58 +1,90 @@
-body{
+body {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.search {
-    margin: 10px;
-}
-html{
+html {
     background-image: url(../../png/background.jpg);
 }
-#searchip {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
+
+.add > a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    background-color: #ccc;
+    border: 1px solid;
 }
-.add{
-    margin:10px;
-}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
 }
-.title{
-    padding: 10px;
+
+.title {
     border-radius: 20px;
     padding: 20px;
-    border-bottom:solid;
+    border-bottom: solid;
     text-align: center;
     font-size: 2.3em;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 }
-.search-add{
+
+.search-add {
     display: flex;
     justify-content: space-between;
+    margin: 20px;   
+    align-items: flex-end;
 }
-.container{
+
+.container {
     border-top: solid;
     border-radius: 20px;
     padding: 10px;
 }
-li{
+
+li {
     list-style: none;
     font-size: 1.5em;
 }
+
 .container div {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    ;
 }
-h3{
+
+h3 {
     font-size: 2em;
     border-bottom: solid;
 }
-th{
+tr{
+    margin: 10px;
+}
+th {
     font-size: 1.5em;
 }
-td{
+
+td {
     font-size: 1.4em;
 }
-
+#btn-primary {
+    text-decoration: none;
+    color: black;
+    background-color: #Ccc;
+    border: 1px solid;
+    padding: 5px;
+}
+#btn-delete{
+    text-decoration: none;
+    color: black;
+    background-color: #Ccc;
+    border: 1px solid;
+    padding: 5px;
+}
+#box-search{
+    width: 400px;
+    height: 36px;
+}
+a{
+    text-decoration: none;
+}

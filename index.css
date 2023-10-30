@@ -1,0 +1,36 @@
+html{
+    background-image: url(png/background.jpg);
+}
+.menu {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+.menu h2 {
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 1.5em;
+}
+
+.menu ul li a:hover {
+    background-color: #a33131;
+}
+h2{
+    font-size: 2.5em;
+}
