@@ -16,7 +16,7 @@
 <body>
     <div class = "main">
         <div class = "title"><h2>Thêm Khu mới</h2></div>
-        <form action="">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ; ?> ">
             <div class ="container">
                 <div class ="ip">
                     <div class = "ma-khu">
