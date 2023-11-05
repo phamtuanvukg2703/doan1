@@ -18,7 +18,13 @@ if(isset($_GET['search'])) {
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
-            require_once("hienthiphong.php");
+            while($row = $result->fetch_assoc()) {
+                // Hiển thị thông tin từ database
+                echo "<p>Mã khu: " . $row['makhu'] . "</p>";
+                echo "<p>Mã phòng: " . $row['maphong'] . "</p>";
+                echo "<p>tên phòng: " . $row['tenphong'] . "</p>";
+                echo "<img src='/doan1/png/{$row['hinh']}'>";
+            }
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

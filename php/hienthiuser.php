@@ -42,7 +42,7 @@ $conn->close();
             <td><?php echo $row['sdt']; ?></td>
             <td>
             <!-- Button Sửa -->
-                <a href="/doan1/qlkhu/html/up-khu.html=">Sửa</a>
+            <a href="/doan1/qlnguoidung/html/up-user.php?id=<?php echo $row['manguoidung']; ?>">Sửa</a>
             </td>
             <td>
                 <a href="/doan1/php/xoauser.php?id=<?php echo $row['manguoidung'] ?>">Xóa</a>

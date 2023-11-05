@@ -18,7 +18,14 @@ if(isset($_GET['search'])) {
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
-            require_once("hienthimuonphong.php");
+            while($row = $result->fetch_assoc()) {
+                // Hiển thị thông tin từ database
+                echo "<p>Mã mượn phòng: " . $row['mamuonphong'] . "</p>";
+                echo "<p>Mã người mượn: " . $row['manguoidung'] . "</p>";
+                echo "<p>Mã phòng mượn: " . $row['maphong'] . "</p>";
+                echo "<p>Ngày mượn: " . $row['ngaymuon'] . "</p>";
+                echo "<p>Ngày trả: " . $row['ngaytra'] . "</p>";
+            }
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

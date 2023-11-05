@@ -18,7 +18,14 @@ if(isset($_GET['search'])) {
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
-            require_once("hienthiuser.php");
+            while($row = $result->fetch_assoc()) {
+                // Hiển thị thông tin từ database
+                echo "<p>Mã người dùng: " . $row['manguoidung'] . "</p>";
+                echo "<p>Tên: " . $row['ten'] . "</p>";
+                echo "<p>:username: " . $row['username'] . "</p>";
+                echo "<p>pass: " . $row['pass'] . "</p>";
+                echo "<p>sdt: " . $row['sdt'] . "</p>";
+            }
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

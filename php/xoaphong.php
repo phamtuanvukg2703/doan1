@@ -2,7 +2,7 @@
     require_once("conn.php");
     $conn = connectDB();
     $maphong = $_GET['id'];
-    $sql = "update phong set trangthai ='0'where maphong = '$maphong' ";
+    $sql = "update phong set trangthaixoa ='0'where maphong = '$maphong' ";
     $result = $conn->query($sql);
     if ($conn->query($sql) == TRUE) {
         echo '<script type="text/javascript">';

@@ -1,3 +1,17 @@
+<?php
+require_once("/xampp/htdocs/doan1/php/conn.php");
+$conn = connectDB();
+$id = $_GET['id'];  
+$sql = "SELECT * FROM muonphong where mamuonphong ='$id'";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $mamuonphong =$row['mamuonphong'];
+    $manguoidung =$row['manguoidung'];
+    $maphong =$row['maphong'];
+    $ngaymuon =$row['ngaymuon'];
+    $ngaytra =$row['ngaytra'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,28 +30,28 @@
     <div class = "main">
         <a href="javascript:history.back()">< Quay lại</a>
         <div class = "title"><h2>Chỉnh sửa người dùng</h2></div>
-        <form action="">
+        <form action="../../php/suamuonphong.php" method="">
             <div class ="container">
                 <div class ="ip">
                     <div class = "mamuonphong">
                         <label for="mamuonphong">Mã mượn phòng:</label>
-                        <input type="text" name="mamuonphong" id="mamuonphong">
+                        <input type="text" name="mamuonphong" id="mamuonphong" value ="<?php echo $mamuonphong ?>" readonly>
                     </div>
                     <div class = "manguoidung">
                         <label for="manguoidung">Mã người dùng:</label>
-                        <input type="text" name="manguoidung" id="manguoidung">
+                        <input type="text" name="manguoidung" id="manguoidung"value ="<?php echo $manguoidung ?>">
                     </div>
                     <div class = "maphong">
                         <label for="maphong">Mã phòng:</label>
-                        <input type="text" name="maphong" id="maphong">
+                        <input type="text" name="maphong" id="maphong"value ="<?php echo $maphong ?>">
                     </div>
                     <div class = "ngaymuon">
                         <label for="ngaymuon">Ngày mượn:</label>
-                        <input type="date" name="ngaymuon" id="ngaymuon">
+                        <input type="date" name="ngaymuon" id="ngaymuon" value ="<?php echo $ngaymuon ?>">
                     </div>
                     <div class = "ngaytra">
                         <label for="ngaytra">Ngày mượn:</label>
-                        <input type="date" name="ngaytra" id="ngaytra">
+                        <input type="date" name="ngaytra" id="ngaytra" value ="<?php echo $ngaytra ?>">
                     </div>
                 </div>
                 <div class ="sub_update">

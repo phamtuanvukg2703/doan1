@@ -1,10 +1,21 @@
+<?php
+require_once("/xampp/htdocs/doan1/php/conn.php");
+$conn = connectDB();
+$id = $_GET['id'];  
+$sql = "SELECT * FROM khu where makhu ='$id'";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $makhu =$row['makhu'];
+    $tenkhu =$row['tenkhu'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉnh sửa người dùng</title>
-    <link rel="stylesheet" href="../css/up-user.css">
+    <title>Chỉnh sửa khu</title>
+    <link rel="stylesheet" href="../css/add-up.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -15,33 +26,23 @@
 <body>
     <div class = "main">
         <a href="javascript:history.back()">< Quay lại</a>
-        <div class = "title"><h2>Chỉnh sửa người dùng</h2></div>
-        <form action="">
+        <div class = "title"><h2>Chỉnh sửa khu</h2></div>
+        <form  method = "" action="../../php/suakhu.php">
             <div class ="container">
                 <div class ="ip">
-                    <div class = "Username">
+                    <div class = "ma-khu">
+                        <label for="makhu">Mã Khu:</label>
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" id="Username">
+                        <input type="text" name="makhu" id="makhu" value ="<?php echo $makhu ?>" readonly>
                     </div>
-                    <div class = "Password">
+                    <div class = "ten-khu">
+                        <label for="tenkhu">Tên khu:</label>
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div class = "Ten">
-                        <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <label for="ten">Tên:</label>
-                        <input type="text" name="ten" id="ten">
-                    </div>
-                    <div class = "Sdt">
-                        <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <label for="sdt">SĐT:</label>
-                        <input type="tel" name="sdt" id="sdt">
+                        <input type="text" name="tenkhu" id="tenkhu" value ="<?php echo $tenkhu ?>">
                     </div>
                 </div>
                 <div class ="sub_update">
-                    <button type="submit" id="submit_up">Chỉnh sửa</button>
+                    <button type="submit" id="submit_add">Chỉnh sửa</button>
                 </div>
             </div>
         </form>

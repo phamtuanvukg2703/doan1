@@ -1,6 +1,6 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = 'SELECT * FROM phong where trangthai = "1"';
+$sqlSelectAll = 'SELECT * FROM phong where trangthaixoa = "1"';
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -39,7 +39,7 @@ $conn->close();
             <td><?php echo "<img src='/doan1/png/{$row['hinh']}'>"?></td>
             <td>
             <!-- Button Sửa -->
-                <a href="../qlphong/html/up-phong.php?id=<?php echo $row['maphong']?>">Sửa</a>
+            <a href="/doan1/qlphong/html/up-phong.php?id=<?php echo $row['maphong']; ?>">Sửa</a>
             </td>
             <td>
                 <a href="/doan1/php/xoaphong.php?id=<?php echo $row['maphong'] ?>">Xóa</a>

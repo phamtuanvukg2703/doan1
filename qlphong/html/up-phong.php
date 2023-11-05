@@ -1,11 +1,14 @@
 <?php
-require_once("conn.php");
+require_once("/xampp/htdocs/doan1/php/conn.php");
 $conn = connectDB();
-$maphong = $_GET['id'];
-$sql = "SELECT * FROM phong WHERE id = '$maphong'";
-$result = $conn->query($sql);
-$row = mysqli_fetch_array($result);
-$conn->close();
+$id = $_GET['id'];  
+$sql = "SELECT * FROM phong where maphong ='$id'";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $makhu =$row['makhu'];
+    $maphong =$row['maphong'];
+    $tenphong =$row['tenphong'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,19 +33,19 @@ $conn->close();
                 <div class ="ip">
                     <div class = "Makhu">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="makhu" id="makhu" value ="<?php echo $row['makhu'] ?>">
+                        <input type="text" name="makhu" id="makhu" value ="<?php echo $makhu ?>">
                     </div>
                     <div class = "Maphong">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="maphong" id="maphong" value ="<?php echo $row['maphong'] ?>">
+                        <input type="text" name="maphong" id="maphong" value ="<?php echo $maphong ?>" readonly>
                     </div>
                     <div class = "Tenphong">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="tenphong" id="tenphong" value ="<?php echo $row['tenphong'] ?>">
+                        <input type="text" name="tenphong" id="tenphong" value ="<?php echo $tenphong ?>">
                     </div>
                     <div class = "hinh">
-                        <input type="file" name="hinh" id="hinh">
-                    </div>
+                        <input type="file" name="hinh" id="hinh" value ="<?php echo $hinh ?>">
+                    </div>  
                 </div>
                 <div class ="sub_update">
                     <button type="submit" id="submit_up">Chỉnh sửa</button>

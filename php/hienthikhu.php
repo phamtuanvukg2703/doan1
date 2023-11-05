@@ -33,7 +33,7 @@ $conn->close();
             <td><?php echo $row['tenkhu']; ?></td>
             <td>
             <!-- Button Sửa -->
-                <a href="suakhu.php">Sửa</a>
+                <a href="/doan1/qlkhu/html/up-khu.php?id=<?php echo $row['makhu'] ?>">Sửa</a>
             </td>
             <td>
                 <a href="/doan1/php/xoakhu.php?id=<?php echo $row['makhu'] ?>">Xóa</a>
