@@ -1,18 +1,27 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 html {
     background-image: url(../../png/background.jpg);
 }
-
+.main > a {
+    text-decoration: none;
+    color: black;
+    background-color: #ccc;
+    border: solid 1px;
+    padding: 10px;
+}
 .add > a {
     text-decoration: none;
     color: black;
     padding: 15px;
     background-color: #ccc;
     border: 1px solid;
+    position: absolute;
+    top: 63%;
+    right: 4%;
 }
 
 button {
@@ -38,8 +47,6 @@ button {
 }
 
 .container {
-    border-top: solid;
-    border-radius: 20px;
     padding: 10px;
 }
 

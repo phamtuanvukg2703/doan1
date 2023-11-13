@@ -4,7 +4,7 @@ $conn = connectDB();
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
     // Truy vấn dữ liệu từ database
-    $sql = "SELECT * FROM nguoidung WHERE manguoidung = '$search'";
+    $sql = "SELECT * FROM nguoidung WHERE manguoidung LIKE '$search%' and trangthai = '1' or ten LIKE '%$search%' and trangthai = '1' or username LIKE '$search%' and trangthai = '1'";
     $result = $conn->query($sql);
 }
 ?>
@@ -19,12 +19,31 @@ if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
             while($row = $result->fetch_assoc()) {
-                // Hiển thị thông tin từ database
-                echo "<p>Mã người dùng: " . $row['manguoidung'] . "</p>";
-                echo "<p>Tên: " . $row['ten'] . "</p>";
-                echo "<p>:username: " . $row['username'] . "</p>";
-                echo "<p>pass: " . $row['pass'] . "</p>";
-                echo "<p>sdt: " . $row['sdt'] . "</p>";
+            ?>
+                <table>
+                    <tr>
+                        <th>Mã người dùng</th>
+                        <th>Tên</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Số điện thoại</th>
+                    </tr>
+                    <tr>
+                        <td><?php echo $row['manguoidung']; ?></td>
+                        <td><?php echo $row['ten']; ?></td>
+                        <td><?php echo $row['username']; ?></td>
+                        <td><?php echo $row['pass']; ?></td>
+                        <td><?php echo $row['sdt']; ?></td>
+                        <td>
+                        <!-- Button Sửa -->
+                        <a href="/doan1/qlnguoidung/html/up-user.php?id=<?php echo $row['manguoidung']; ?>">Sửa</a>
+                        </td>
+                        <td>
+                            <a href="/doan1/php/xoauser.php?id=<?php echo $row['manguoidung'] ?>">Xóa</a>
+                        </td>
+                    </tr>
+                </table>
+                <?php
             }
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";

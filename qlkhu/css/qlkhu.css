@@ -1,7 +1,7 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 html {
     background-image: url(../../png/background.jpg);
@@ -13,8 +13,17 @@ html {
     padding: 15px;
     background-color: #ccc;
     border: 1px solid;
+    position: absolute;
+    top: 63%;
+    right: 4%;
 }
-
+.main > a {
+    text-decoration: none;
+    color: black;
+    background-color: #ccc;
+    border: solid 1px;
+    padding: 10px;
+}
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -38,7 +47,6 @@ button {
 }
 
 .container {
-    border-top: solid;
     border-radius: 20px;
     padding: 10px;
 }
@@ -50,7 +58,6 @@ li {
 
 .container div {
     font-family: 'Roboto', sans-serif;
-    ;
 }
 
 h3 {
