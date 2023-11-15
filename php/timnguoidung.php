@@ -8,7 +8,6 @@ if(isset($_GET['search'])) {
     $result = $conn->query($sql);
 }
 ?>
-    <h2>Tìm kiếm người dùng</h2>
     <form method="GET">
         <input type="text" name="search" id="box-search" placeholder="Nhập mã người dùng" required>
         <button type="submit">Tìm kiếm</button>
@@ -17,10 +16,9 @@ if(isset($_GET['search'])) {
     // Hiển thị kết quả tìm kiếm
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
-            echo "<h2>Kết quả tìm kiếm:</h2>";
-            while($row = $result->fetch_assoc()) {
+            echo "<h2>Kết quả tìm kiếm:</h2>"
             ?>
-                <table>
+            <table>
                     <tr>
                         <th>Mã người dùng</th>
                         <th>Tên</th>
@@ -28,6 +26,9 @@ if(isset($_GET['search'])) {
                         <th>Password</th>
                         <th>Số điện thoại</th>
                     </tr>
+            <?php
+            while($row = $result->fetch_assoc()) {
+            ?>
                     <tr>
                         <td><?php echo $row['manguoidung']; ?></td>
                         <td><?php echo $row['ten']; ?></td>
@@ -42,9 +43,11 @@ if(isset($_GET['search'])) {
                             <a href="/doan1/php/xoauser.php?id=<?php echo $row['manguoidung'] ?>">Xóa</a>
                         </td>
                     </tr>
-                </table>
                 <?php
-            }
+                } 
+                ?>
+            </table>
+        <?php
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

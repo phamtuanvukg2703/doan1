@@ -4,11 +4,10 @@ $conn = connectDB();
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
     // Truy vấn dữ liệu từ database
-    $sql = "SELECT * FROM phong WHERE maphong LIKE '$search%' and trangthaixoa = '1' or makhu LIKE '$search%' and trangthaixoa = '1' or tenphong LIKE '%$search%' and trangthaixoa = '1'";
+    $sql = "SELECT * FROM phong WHERE maphong LIKE '$search%' and trangthaixoa = '1' or makhu LIKE '$search%' and trangthaixoa = '1'";
     $result = $conn->query($sql);
 }
 ?>
-    <h2>Tìm kiếm phòng</h2>
     <form method="GET">
         <input type="text" name="search" id="box-search" placeholder="Nhập mã phòng" required>
         <button type="submit">Tìm kiếm</button>
@@ -18,7 +17,6 @@ if(isset($_GET['search'])) {
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
-            while($row = $result->fetch_assoc()) {
             ?>
             <table>
                 <tr>
@@ -27,6 +25,9 @@ if(isset($_GET['search'])) {
                     <th>Tên phòng</th>
                     <th>Hình ảnh</th>
                 </tr>
+            <?php
+            while($row = $result->fetch_assoc()) {
+            ?>
                 <tr>
                     <td><?php echo $row['makhu']; ?></td>
                     <td><?php echo $row['maphong']; ?></td>
@@ -40,9 +41,11 @@ if(isset($_GET['search'])) {
                         <a href="/doan1/php/xoaphong.php?id=<?php echo $row['maphong'] ?>">Xóa</a>
                     </td>
                 </tr>
+                <?php
+                } 
+                ?>
             </table>
-            <?php
-            }
+        <?php
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

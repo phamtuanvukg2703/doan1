@@ -1,97 +1,64 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 20px;
+html {     line-height: 1.5;     -webkit-text-size-adjust: 100%;     -moz-tab-size: 4;     -o-tab-size: 4;     tab-size: 4;     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;     font-feature-settings: normal;     font-variation-settings: normal; }
+body{
+    background-color:#cbd5e1;
 }
-html {
-    background-image: url(../../png/background.jpg);
-}
-
-.add > a {
-    text-decoration: none;
-    color: black;
-    padding: 15px;
-    background-color: #ccc;
-    border: 1px solid;
-    position: absolute;
-    top: 63%;
-    right: 4%;
-}
-.main > a {
-    text-decoration: none;
-    color: black;
-    background-color: #ccc;
-    border: solid 1px;
-    padding: 10px;
-}
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
 .title {
-    border-radius: 20px;
-    padding: 20px;
-    border-bottom: solid;
     text-align: center;
-    font-size: 2.3em;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
 }
-
-.search-add {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;   
-    align-items: flex-end;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
-
 .container {
-    border-radius: 20px;
-    padding: 10px;
+    margin: 0 auto;
+    width: 720px;
+    padding: 10px 0;
 }
-
-li {
-    list-style: none;
-    font-size: 1.5em;
-}
-
-.container div {
-    font-family: 'Roboto', sans-serif;
-}
-
-h3 {
-    font-size: 2em;
-    border-bottom: solid;
-}
-tr{
-    margin: 10px;
-}
-th {
-    font-size: 1.5em;
-}
-
-td {
-    font-size: 1.4em;
-}
-#btn-primary {
-    text-decoration: none;
-    color: black;
-    background-color: #Ccc;
+.table{
+    text-align: center;
+    width: 100%;
+    background-color: #f8fafc;
+    border-radius: 5px;
     border: 1px solid;
+}
+.table a{
+    color: white;
+    padding: 5px 0;
+    background-color: black;
+    display: block;
+    border-radius: 5px;
+}
+.table tr {
+    margin: 10px 0;
+}
+.add-search {
+    display: flex;
+    margin: 0 auto;
+    width: 720px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.add-search > a {
+    color: white;
+    background-color: #0ea5e9;
     padding: 5px;
+    border-radius: 5px;
 }
-#btn-delete{
-    text-decoration: none;
-    color: black;
-    background-color: #Ccc;
-    border: 1px solid;
+.add-search input {
+    width: 230px;
+    height: 30px;
+}
+.add-search button {
+    height: 34px;
+}
+.main > h3 {
+    margin: 0 auto;
+    width: 720px;
+}
+.main > a{
+    color: white;
+    background-color: black;
     padding: 5px;
-}
-#box-search{
-    width: 400px;
-    height: 36px;
-}
-a{
-    text-decoration: none;
+    border-radius: 5px;
 }

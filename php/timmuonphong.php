@@ -8,7 +8,6 @@ if(isset($_GET['search'])) {
     $result = $conn->query($sql);
 }
 ?>
-    <h2>Tìm kiếm người dùng</h2>
     <form method="GET">
         <input type="text" name="search" id="box-search" placeholder="Nhập mã mượn phòng" required>
         <button type="submit">Tìm kiếm</button>
@@ -18,17 +17,19 @@ if(isset($_GET['search'])) {
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
             echo "<h2>Kết quả tìm kiếm:</h2>";
+            ?>
+            <table>
+                <tr>
+                    <th>Mã mượn phòng</th>
+                    <th>Mã người mượn</th>
+                    <th>Mã phòng mượn</th>
+                    <th>Ngày mượn</th>
+                    <th>Ngày trả</th>
+                </tr>
+            <?php
             while($row = $result->fetch_assoc()) {
                 // Hiển thị thông tin từ database
                 ?>
-                <table>
-                    <tr>
-                        <th>Mã mượn phòng</th>
-                        <th>Mã người mượn</th>
-                        <th>Mã phòng mượn</th>
-                        <th>Ngày mượn</th>
-                        <th>Ngày trả</th>
-                    </tr>
                     <tr>
                         <td><?php echo $row['mamuonphong']; ?></td>
                         <td><?php echo $row['manguoidung']; ?></td>
@@ -43,9 +44,11 @@ if(isset($_GET['search'])) {
                             <a href="/doan1/php/xoamuonphong.php?id=<?php echo $row['mamuonphong'] ?>">Xóa</a>
                         </td>
                     </tr>
-                </table>
-                <?php
-            }
+                    <?php
+                } 
+                ?>
+            </table>
+        <?php
         } else {
             echo "<p>Không tìm thấy kết quả.</p>";
         }

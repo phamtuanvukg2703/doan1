@@ -1,9 +1,16 @@
-html{
-    background-image: url(png/background.jpg);
+html {     line-height: 1.5;     -webkit-text-size-adjust: 100%;     -moz-tab-size: 4;     -o-tab-size: 4;     tab-size: 4;     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;     font-feature-settings: normal;     font-variation-settings: normal; }
+body{
+    background-color:#cbd5e1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 .menu {
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: #1e293b;
+    display: flex;
+    padding: 0 20px;
 }
 .menu h2 {
     text-align: center;
@@ -11,26 +18,69 @@ html{
 
 .menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
 }
-
-.menu ul li {
-    margin: 0 10px;
-}
-
 .menu ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 5px 10px;
+    display: block;
     font-size: 1.5em;
 }
 
 .menu ul li a:hover {
-    background-color: #a33131;
+    background-color: #075985;
 }
-h2{
-    font-size: 2.5em;
+#container {
+    margin: 0 auto;
+    width: 720px;
+    padding: 10px 0;
+}
+.table{
+    text-align: center;
+    width: 100%;
+    background-color: #f8fafc;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.table a {
+    color: white;
+    padding: 10px;
+    background-color: black;
+    display: block;
+    border-radius: 5px;
+}
+.table tr {
+    margin: 10px 0;
+}
+.add-search {
+    display: flex;
+    margin: 0 auto;
+    width: 720px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.add-search > a {
+    color: white;
+    background-color: #0ea5e9;
+    padding: 5px;
+    border-radius: 5px;
+}
+.add-search input {
+    width: 230px;
+    height: 30px;
+}
+.add-search button {
+    height: 34px;
+}
+.main > h3 {
+    margin: 0 auto;
+    width: 720px;
+}
+.main > a{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
 }

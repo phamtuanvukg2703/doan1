@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 $conn->close();
 ?>
-<table class="table table-borderd">
+<table class="table">
     <thead>
         <tr>
             <th>Mã mượn phòng</th>
