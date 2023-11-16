@@ -8,7 +8,7 @@
     $hinh = $_FILES['hinh']['name'];
     move_uploaded_file($_FILES['hinh']["tmp_name"],"../png/".$_FILES['hinh']['name']);
     // SQL để chèn dữ liệu vào bảng
-    $sql ="INSERT INTO phong(makhu,maphong,tenphong, hinh, trangthai, trangthaixoa) VALUES ('$makhu','$maphong','$tenphong','$hinh', '0', '1')";
+    $sql ="INSERT INTO phong(makhu,maphong,tenphong, hinh, trangthai, trangthaixoa) VALUES ('$makhu','$maphong','$tenphong','$hinh','trống', '1')";
     if ($conn->query($sql) == TRUE) {
         echo '<script type="text/javascript">';
         echo 'alert("Thêm phòng thành công!");';

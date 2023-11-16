@@ -43,4 +43,8 @@ button{
 }
 a {
     text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: black;
 }

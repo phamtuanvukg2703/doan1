@@ -4,7 +4,11 @@ $conn = connectDB();
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
     // Truy vấn dữ liệu từ database
-    $sql = "SELECT * FROM phong WHERE maphong LIKE '$search%' and trangthaixoa = '1' or makhu LIKE '$search%' and trangthaixoa = '1'";
+    $sql = "SELECT *
+    FROM phong p, khu k
+    WHERE p.makhu = k.makhu and k.trangthai = '1' and
+        p.maphong LIKE '$search%' and p.trangthaixoa = '1' 
+        and k.makhu LIKE '$search%' and p.trangthaixoa = '1'";
     $result = $conn->query($sql);
 }
 ?>

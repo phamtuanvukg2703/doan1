@@ -1,6 +1,6 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = 'SELECT * FROM phong where trangthaixoa = "1"';
+$sqlSelectAll = "SELECT p.maphong, p.tenphong, p.hinh, p.makhu, p.trangthai FROM phong p, khu k WHERE p.makhu = k.makhu and p.trangthaixoa = '1' and k.trangthai = '1' ";
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -9,6 +9,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     'tenphong' => $row['tenphong'],
     'hinh' => $row['hinh'],
     'makhu' => $row['makhu'],
+    'trangthai' => $row['trangthai'],
     );
 }
 $conn->close();
@@ -20,6 +21,7 @@ $conn->close();
             <th>Mã phòng</th>
             <th>Tên phòng</th>
             <th>Hình ảnh</th>
+            <th>Trạng thái</th>
         </tr>
     </thead>
     <tbody>
@@ -37,6 +39,7 @@ $conn->close();
             <td><?php echo $row['maphong']; ?></td>
             <td><?php echo $row['tenphong']; ?></td>
             <td><?php echo "<img src='/doan1/png/{$row['hinh']}'>"?></td>
+            <td><?php echo $row['trangthai'] ?></td>
             <td>
             <!-- Button Sửa -->
             <a href="/doan1/qlphong/html/up-phong.php?id=<?php echo $row['maphong']; ?>">Sửa</a>
