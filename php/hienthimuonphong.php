@@ -17,7 +17,7 @@ $conn->close();
 <table class="table">
     <thead>
         <tr>
-            <th>Mã mượn phòng</th>
+            <th>STT</th>
             <th>Mã người mượn</th>
             <th>Mã phòng mượn</th>
             <th>Ngày mượn</th>

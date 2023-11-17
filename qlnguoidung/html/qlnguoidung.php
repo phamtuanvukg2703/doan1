@@ -11,13 +11,12 @@
 </head>
 <body>
     <div class = "main">
-    <a href="javascript:history.back()">< Quay lại</a>
-        <div class = "title">
+        <div class = "menu">
+            <a href="../../index.php">< Quay lại</a>
             <h2>Quản Lý Người Dùng</h2>
         </div>
-        <h3>Tìm kiếm người dùng</h3>
         <div class = add-search>
-            <?php  require("/xampp/htdocs/doan1/php/timnguoidung.php")?>
+            <div class = 'search'><?php  require("/xampp/htdocs/doan1/php/timnguoidung.php")?></div>
             <a href="add-user.html">Thêm người dùng</a>
         </div>
         <div class = "container">

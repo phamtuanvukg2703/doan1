@@ -84,3 +84,20 @@ body{
     padding: 5px;
     border-radius: 5px;
 }
+.search table {
+    text-align: center;
+    width: 100%;
+    background-color: #f8fafc;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.search a{
+    color: white;
+    padding: 5px 0;
+    background-color: black;
+    display: block;
+    border-radius: 5px;
+}
+.search tr {
+    margin: 10px 0;
+}

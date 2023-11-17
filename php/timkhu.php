@@ -16,7 +16,7 @@ if(isset($_GET['search'])) {
     // Hiển thị kết quả tìm kiếm
     if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
-            echo "<h2>Kết quả tìm kiếm:</h2>";
+            echo "<h3>Kết quả tìm kiếm:</h3>";
             ?>
             <table>
                 <tr>

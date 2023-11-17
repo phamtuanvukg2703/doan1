@@ -2,9 +2,6 @@ html {     line-height: 1.5;     -webkit-text-size-adjust: 100%;     -moz-tab-si
 body{
     background-color:#cbd5e1;
 }
-.title {
-    text-align: center;
-}
 * {
     margin: 0;
     padding: 0;
@@ -61,4 +58,50 @@ body{
     background-color: black;
     padding: 5px;
     border-radius: 5px;
+}
+.search table {
+    text-align: center;
+    width: 100%;
+    background-color: #f8fafc;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.search a{
+    color: white;
+    padding: 5px 0;
+    background-color: black;
+    display: block;
+    border-radius: 5px;
+}
+.search tr {
+    margin: 10px 0;
+}
+.menu {
+    background-color: #1e293b;
+    display: flex;
+    padding: 0 20px;
+    align-items: baseline;  
+    margin-bottom: 10px;
+}
+.menu h2 {
+    color: white;
+    margin: 0 auto;
+    width: 250px;
+    font-size: 1.7em;
+}
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    display: block;
+    font-size: 1.5em;
+}
+
+.menu a:hover {
+    background-color: #075985;
 }

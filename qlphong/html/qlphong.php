@@ -11,13 +11,12 @@
 </head>
 <body>
     <div class = "main">
-    <a href="javascript:history.back()">< Quay lại</a>
-        <div class = "title">
+        <div class = "menu">
+            <a href="../../index.php">< Quay lại</a>
             <h2>Quản Lý Phòng Thực Hành</h2>
         </div>
-        <h3>Tìm kiếm phòng</h3>
         <div class = 'add-search'>
-            <?php require("/xampp/htdocs/doan1/php/timphong.php")?>
+            <div class = 'search'><?php require("/xampp/htdocs/doan1/php/timphong.php")?></div>
             <a href="../../qlphong/html/add-phong.html">thêm phòng</a>
         </div>
         <div class = "container">

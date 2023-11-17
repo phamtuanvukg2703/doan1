@@ -19,12 +19,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sửa thông tin mượn phòng</title>
     <link rel="stylesheet" href="../css/up-muonphong.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = "main">
@@ -33,10 +27,6 @@ while ($row = mysqli_fetch_assoc($result)) {
         <form action="../../php/suamuonphong.php" method="">
             <div class ="container">
                 <div class ="ip">
-                    <div class = "mamuonphong">
-                        <label for="mamuonphong">Mã mượn phòng:</label>
-                        <input type="text" name="mamuonphong" id="mamuonphong" value ="<?php echo $mamuonphong ?>" readonly>
-                    </div>
                     <div class = "manguoidung">
                         <label for="manguoidung">Mã người dùng:</label>
                         <input type="text" name="manguoidung" id="manguoidung"value ="<?php echo $manguoidung ?>">

@@ -1,50 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-html{
-    background-image: url(../../png/form.jpg);
-}
-body{
     box-sizing: border-box;
 }
-h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: solid;
-    font-size: 2em;
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
 }
-.main{
-    height: 520px;
-    padding: 15px;
-    border: solid;
-    background-color: white;
-    border-radius: 40px;
-    width: 600px;
-    position: fixed;
+
+body {
+    background-color: #cbd5e1;
+}
+
+.main {
+    /* border: solid; */
+    /* background-color: white; */
+    /* position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%); */
+    margin: 20px auto;
+    width: 370px;
 }
-.container div input{
-    width: 95%;
+
+.main * {
+    width: 100%;
+}
+
+.main input {
+    padding: 10px 20px;
+    border: 0;
+    /* border-bottom: 1px solid black; */
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.main .title {
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.main button {
+    background-color: #0f172a;
+    color: white;
+    border: 0;
     padding: 10px;
-    margin: 10px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-}
-button{
-    display:block;
-    margin: 0 auto;
-    border-radius: 11px;
-    padding: 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
     cursor: pointer;
 }
-a {
+.main a {
     text-decoration: none;
+    background-color: #0f172a;
     color: white;
+    padding: 10px;
     border-radius: 5px;
-    padding: 5px;
-    background-color: black;
+    display: block;
+    width: 100px;
 }
