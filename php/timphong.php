@@ -6,9 +6,8 @@ if(isset($_GET['search'])) {
     // Truy vấn dữ liệu từ database
     $sql = "SELECT *
     FROM phong p, khu k
-    WHERE p.makhu = k.makhu and k.trangthai = '1' and
-        p.maphong LIKE '$search%' and p.trangthaixoa = '1' 
-        and k.makhu LIKE '$search%' and p.trangthaixoa = '1'";
+    WHERE p.makhu = k.makhu and k.trangthai = '1'
+        and p.maphong LIKE '$search%' and p.trangthaixoa = '1'";
     $result = $conn->query($sql);
 }
 ?>

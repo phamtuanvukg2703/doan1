@@ -4,7 +4,7 @@ $conn = connectDB();
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
     // Truy vấn dữ liệu từ database
-    $sql = "SELECT * FROM khu WHERE makhu LIKE '$search%' and trangthai = '1' or tenkhu like '%$search%' and trangthai='1'";
+    $sql = "SELECT * FROM khu WHERE makhu = '$search%' and trangthai = '1' or tenkhu like '%$search%' and trangthai='1'";
     $result = $conn->query($sql);
 }
 ?>

@@ -20,7 +20,7 @@ if(isset($_GET['search'])) {
             ?>
             <table>
                 <tr>
-                    <th>Mã mượn phòng</th>
+                    <th>STT</th>
                     <th>Mã người mượn</th>
                     <th>Mã phòng mượn</th>
                     <th>Ngày mượn</th>

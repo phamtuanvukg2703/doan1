@@ -7,9 +7,8 @@
     $username = $_POST['username'];
     $pass = $_POST['pass'];
     $sdt = $_POST['sdt'];
-    $trangthai = $_POST['trangthai'];
     // SQL để chèn dữ liệu vào bảng
-    $sql = "INSERT INTO nguoidung (manguoidung, ten, username, pass, sdt, trangthai) VALUES ('$manguoidung', '$ten','$username','$pass','$sdt', '1')";
+    $sql = "INSERT INTO nguoidung(manguoidung, ten, username, pass, sdt, trangthai) VALUES('$manguoidung','$ten','$username','$pass','$sdt','1')";
     if ($conn->query($sql) == TRUE) {
         echo '<script type="text/javascript">';
         echo 'alert("Thêm người dùng thành công!");';
