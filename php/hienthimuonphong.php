@@ -1,13 +1,13 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = 'SELECT * FROM muonphong where trangthai = "1"';
+$sqlSelectAll = 'SELECT * FROM muonphong INNER JOIN phong ON muonphong.maphong = phong.maphong INNER JOIN nguoidung ON muonphong.manguoidung = nguoidung.manguoidung where muonphong.trangthai = "1"';
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     $data[] = array( // sử dụng biến tự tăng để làm dữ liệu cột STT
     'mamuonphong' => $row['mamuonphong'],
-    'manguoidung' => $row['manguoidung'],
-    'maphong' => $row['maphong'],
+    'ten' => $row['ten'],
+    'tenphong' => $row['tenphong'],
     'ngaymuon' => $row['ngaymuon'],
     'ngaytra' => $row['ngaytra'],
     );
@@ -18,8 +18,8 @@ $conn->close();
     <thead>
         <tr>
             <th>STT</th>
-            <th>Mã người mượn</th>
-            <th>Mã phòng mượn</th>
+            <th>Tên</th>
+            <th>Tên phòng</th>
             <th>Ngày mượn</th>
             <th>Ngày trả</th>
         </tr>
@@ -36,8 +36,8 @@ $conn->close();
         foreach ($data as $row) {?>
         <tr>
             <td><?php echo $row['mamuonphong']; ?></td>
-            <td><?php echo $row['manguoidung']; ?></td>
-            <td><?php echo $row['maphong']; ?></td>
+            <td><?php echo $row['ten']; ?></td>
+            <td><?php echo $row['tenphong']; ?></td>
             <td><?php echo $row['ngaymuon']; ?></td>
             <td><?php echo $row['ngaytra']; ?></td>
             <td>

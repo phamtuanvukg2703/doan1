@@ -1,6 +1,6 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = "SELECT p.maphong, p.tenphong, p.hinh, p.makhu, p.trangthai FROM phong p, khu k WHERE p.makhu = k.makhu and p.trangthaixoa = '1' and k.trangthai = '1' ";
+$sqlSelectAll = "SELECT p.maphong, p.tenphong, p.hinh, k.tenkhu, p.trangthai FROM phong p, khu k WHERE p.makhu = k.makhu and p.trangthaixoa = '1' and k.trangthai = '1' ";
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -8,16 +8,16 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     'maphong' => $row['maphong'],
     'tenphong' => $row['tenphong'],
     'hinh' => $row['hinh'],
-    'makhu' => $row['makhu'],
+    'tenkhu' => $row['tenkhu'],
     'trangthai' => $row['trangthai'],
     );
 }
 $conn->close();
 ?>
-<table class="table table-borderd">
+<table class="table">
     <thead>
         <tr>
-            <th>Mã Khu</th>
+            <th>Tên khu</th>
             <th>Mã phòng</th>
             <th>Tên phòng</th>
             <th>Hình ảnh</th>
@@ -35,7 +35,7 @@ $conn->close();
     else 
         foreach ($data as $row) {?>
         <tr>
-            <td><?php echo $row['makhu']; ?></td>
+            <td><?php echo $row['tenkhu']; ?></td>
             <td><?php echo $row['maphong']; ?></td>
             <td><?php echo $row['tenphong']; ?></td>
             <td><?php echo "<img src='/doan1/png/{$row['hinh']}'>"?></td>

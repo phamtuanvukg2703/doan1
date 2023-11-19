@@ -10,9 +10,12 @@
     <div class = "menu">
         <!-- <h2>Quản Lý Phòng Thực Hành</h2> -->
         <ul>
-            <li><a href="qlkhu/html/qlkhu.php">Quản lý khu</a></li>
-            <li><a href="qlphong/html/qlphong.php">Quản lý phòng</a></li>
-            <li><a href="qlnguoidung/html/qlnguoidung.php">Quản lý người dùng</a></li>
+            <h2>Mượn phòng thực hành</h2>
+            <div class = 'list'>
+                <li><a href="qlkhu/html/qlkhu.php">Quản lý khu</a></li>
+                <li><a href="qlphong/html/qlphong.php">Quản lý phòng thực hành</a></li>
+                <li><a href="qlnguoidung/html/qlnguoidung.php">Quản lý người dùng</a></li>
+            </div>
         </ul> 
     </div>
     <div id = 'container'>

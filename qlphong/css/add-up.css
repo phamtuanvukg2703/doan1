@@ -63,3 +63,16 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
+select{
+    padding: 10px 20px;
+    border: 0;
+    /* border-bottom: 1px solid black; */
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.hinh{
+    margin: 10px 0;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}

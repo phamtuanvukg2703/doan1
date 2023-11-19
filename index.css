@@ -7,19 +7,26 @@ body{
     padding: 0;
     text-decoration: none;
 }
-.menu {
-    background-color: #1e293b;
-    display: flex;
-    padding: 0 20px;
-}
 .menu h2 {
     text-align: center;
 }
-
+.list{
+    display: flex;
+}
+.menu h2{
+    color: #4f46e5;
+    padding: 5px 10px;
+    display: block;
+    font-size: 1.5em;
+    background-color: #c7d2fe;
+    border-radius: 10px;
+}
 .menu ul {
+    background-color: #1e293b;
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 .menu ul li a {
     text-decoration: none;
@@ -40,7 +47,7 @@ body{
 .table{
     text-align: center;
     width: 100%;
-    background-color: #f8fafc;
+    background-color: #94a3b8;
     border-radius: 5px;
     border: 1px solid;
 }
@@ -51,8 +58,13 @@ body{
     display: block;
     border-radius: 5px;
 }
-.table tr {
-    margin: 10px 0;
+.table td{
+    height: 40px;
+    text-align: center;
+    background-color: white;
+}
+.table th{
+    height: 50px;
 }
 .add-search {
     display: flex;
@@ -64,7 +76,7 @@ body{
 .add-search > a {
     color: white;
     background-color: #0ea5e9;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
 }
 .add-search input {
@@ -86,18 +98,23 @@ body{
 }
 .search table {
     text-align: center;
-    width: 100%;
-    background-color: #f8fafc;
+    width: 120%;
+    background-color: #94a3b8;
     border-radius: 5px;
     border: 1px solid;
 }
 .search a{
     color: white;
-    padding: 5px 0;
+    padding: 10px;
     background-color: black;
     display: block;
     border-radius: 5px;
 }
-.search tr {
-    margin: 10px 0;
+.search th{
+    height: 50px;
+}
+.search td{
+    height: 40px;
+    text-align: center;
+    background-color: white;
 }

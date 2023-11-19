@@ -12,7 +12,7 @@
         <div class = add-search>
             <!-- PHP -->
             <div class = 'search'><?php require("/xampp/htdocs/doan1/php/timmuonphong.php") ?></div>
-            <a href="/doan1/qlmuonphong/html/add-muonphong.html">Đặt lịch phòng</a>
+            <a href="/doan1/qlmuonphong/html/add-muonphong.php">Đặt lịch phòng</a>
         </div>
         <div class = container>
             <h3>Danh sách các mượn phòng</h3>

@@ -55,8 +55,13 @@ body{
     display: block;
     border-radius: 5px;
 }
-.table tr {
-    margin: 10px 0;
+.table td{
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+.table th{
+    height: 50px;
 }
 .add-search {
     display: flex;
@@ -93,7 +98,7 @@ img {
     width: 250px;
     height: 200px;
     border-radius: 10px;
-    border: solid;
+
 }
 .search table {
     text-align: center;

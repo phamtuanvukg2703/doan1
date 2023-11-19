@@ -4,7 +4,11 @@ $conn = connectDB();
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
     // Truy vấn dữ liệu từ database
-    $sql = "SELECT * FROM muonphong WHERE mamuonphong LIKE '$search%' and trangthai = '1'or maphong LIKE '$search%' and trangthai = '1' or manguoidung LIKE '$search%' and trangthai = '1' ";
+    $sql = "SELECT muonphong.mamuonphong, phong.tenphong, nguoidung.ten, muonphong.ngaymuon, muonphong.ngaytra
+    FROM muonphong
+    INNER JOIN phong ON muonphong.maphong = phong.maphong
+    INNER JOIN nguoidung ON muonphong.manguoidung = nguoidung.manguoidung
+    WHERE muonphong.mamuonphong LIKE '$search%' and muonphong.trangthai = '1'or phong.maphong LIKE '$search%' and muonphong.trangthai = '1' or nguoidung.ten LIKE '$search%' and muonphong.trangthai = '1' ";
     $result = $conn->query($sql);
 }
 ?>
@@ -21,8 +25,8 @@ if(isset($_GET['search'])) {
             <table>
                 <tr>
                     <th>STT</th>
-                    <th>Mã người mượn</th>
-                    <th>Mã phòng mượn</th>
+                    <th>Tên</th>
+                    <th>Tên phòng</th>
                     <th>Ngày mượn</th>
                     <th>Ngày trả</th>
                 </tr>
@@ -32,8 +36,8 @@ if(isset($_GET['search'])) {
                 ?>
                     <tr>
                         <td><?php echo $row['mamuonphong']; ?></td>
-                        <td><?php echo $row['manguoidung']; ?></td>
-                        <td><?php echo $row['maphong']; ?></td>
+                        <td><?php echo $row['ten']; ?></td>
+                        <td><?php echo $row['tenphong']; ?></td>
                         <td><?php echo $row['ngaymuon']; ?></td>
                         <td><?php echo $row['ngaytra']; ?></td>
                         <td>

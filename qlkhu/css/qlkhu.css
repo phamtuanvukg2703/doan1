@@ -26,8 +26,13 @@ body{
     display: block;
     border-radius: 5px;
 }
-.table tr {
-    margin: 10px 0;
+.table td{
+    height: 40px;
+    text-align: center;
+    background-color: white;
+}
+.table th {
+    height: 40px;
 }
 .add-search {
     display: flex;
@@ -39,7 +44,7 @@ body{
 .add-search > a {
     color: white;
     background-color: #0ea5e9;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
 }
 .add-search input {

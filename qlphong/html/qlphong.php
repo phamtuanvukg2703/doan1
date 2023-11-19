@@ -17,7 +17,7 @@
         </div>
         <div class = 'add-search'>
             <div class = 'search'><?php require("/xampp/htdocs/doan1/php/timphong.php")?></div>
-            <a href="../../qlphong/html/add-phong.html">thêm phòng</a>
+            <a href="../../qlphong/html/add-phong.php">thêm phòng</a>
         </div>
         <div class = "container">
             <h3>Danh sách các phòng thực hành</h3>
