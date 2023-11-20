@@ -4,7 +4,6 @@
     // Lấy dữ liệu từ biểu mẫu
     $makhu = $_POST['makhu'];
     $tenkhu = $_POST['tenkhu'];
-    $trangthai = $_POST['trangthai'];
     // SQL để chèn dữ liệu vào bảng
     $sql = "INSERT INTO khu (makhu, tenkhu, trangthai) VALUES ('$makhu', '$tenkhu','1')";
     if ($conn->query($sql) == TRUE) {

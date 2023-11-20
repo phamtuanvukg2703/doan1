@@ -62,7 +62,7 @@ $cbroom = getcomboboxroom($conn);
     $maphong = $_POST['maphong'];
     $ngaymuon = $_POST['ngaymuon'];
     $ngaytra = $_POST['ngaytra'];
-    $check = "SELECT mamuonphong FROM muonphong WHERE manguoidung='$manguoidung' AND maphong='$maphong' AND ngaymuon='$ngaymuon'";
+    $check = "SELECT mamuonphong FROM muonphong WHERE maphong='$maphong' AND ngaymuon='$ngaymuon'";
     $result = mysqli_query($conn, $check);
         if (mysqli_num_rows($result) > 0) {
             // Đã mượn rồi

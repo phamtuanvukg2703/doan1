@@ -12,7 +12,7 @@ $sql = "UPDATE muonphong SET manguoidung ='$manguoidung',maphong ='$maphong',nga
 if ($conn->query($sql) === TRUE) {
     echo '<script type="text/javascript">';
     echo 'alert("Sửa thành công!");';
-    echo 'window.location.href = "../qlmuonphong/html/qlmuonphong.php";'; 
+    echo 'window.location.href = "../index.php";'; 
     echo '</script>';
 } else {
   echo "Error updating record: " . $conn->error;

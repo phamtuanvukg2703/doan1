@@ -40,7 +40,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class = "Password">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
                         <label for="password">Password:</label>
-                        <input type="text" name="password" id="password" value ="<?php echo $pass ?>">
+                        <input type="password" name="pass" id="password" value ="<?php echo $pass ?>">
                     </div>
                     <div class = "Ten">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
