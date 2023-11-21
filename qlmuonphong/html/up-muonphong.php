@@ -26,6 +26,9 @@ $conn->close();
         <form action="../../php/suamuonphong.php" method="">
             <div class ="container">
                 <div class ="ip">
+                    <div class = "mamuonphong">
+                        <input type="hidden" name="mamuonphong" id='mamuonphong' value="<?php echo $row['mamuonphong'] ?>">
+                    </div>
                     <div class = "manguoidung">
                         <label for="manguoidung">Tên người dùng:</label>
                         <select name="manguoidung">

@@ -23,7 +23,7 @@ if(isset($_GET['search'])) {
             ?>
             <table>
                 <tr>
-                    <th>Mã Khu</th>
+                    <th>Tên khu</th>
                     <th>Mã phòng</th>
                     <th>Tên phòng</th>
                     <th>Hình ảnh</th>
@@ -32,7 +32,7 @@ if(isset($_GET['search'])) {
             while($row = $result->fetch_assoc()) {
             ?>
                 <tr>
-                    <td><?php echo $row['makhu']; ?></td>
+                    <td><?php echo $row['tenkhu']; ?></td>
                     <td><?php echo $row['maphong']; ?></td>
                     <td><?php echo $row['tenphong']; ?></td>
                     <td><?php echo "<img src='/doan1/png/{$row['hinh']}'>"?></td>

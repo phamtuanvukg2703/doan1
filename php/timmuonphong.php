@@ -11,6 +11,7 @@ if(isset($_GET['search'])) {
     WHERE muonphong.mamuonphong LIKE '$search%' and muonphong.trangthai = '1'
     or phong.maphong LIKE '%$search%' and muonphong.trangthai = '1'
     or nguoidung.ten LIKE '%$search%' and muonphong.trangthai = '1'
+    or phong.tenphong LIKE '%$search%' and muonphong.trangthai = '1'
     or '$search' BETWEEN muonphong.ngaymuon and muonphong.ngaytra and muonphong.trangthai = '1'";
     $result = $conn->query($sql);
 }

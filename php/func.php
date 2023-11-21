@@ -18,7 +18,7 @@
     //update combobox phòng
     function getPhongOptions($selectedMaphong) {
         global $conn;
-        $sql = "SELECT maphong, tenphong FROM phong";
+        $sql = "SELECT maphong, tenphong FROM phong where trangthaixoa = 1";
         $result = $conn->query($sql);
         $options = "";
         while ($row = $result->fetch_assoc()) {
@@ -30,7 +30,7 @@
     //update combobox người dùng
     function getNguoidungOptions($selectedManguoidung) {
         global $conn;
-        $sql = "SELECT manguoidung, ten FROM nguoidung";
+        $sql = "SELECT manguoidung, ten FROM nguoidung where trangthai = 1";
         $result = $conn->query($sql);
     
         $options = "";
