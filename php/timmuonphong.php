@@ -9,9 +9,9 @@ if(isset($_GET['search'])) {
     INNER JOIN phong ON muonphong.maphong = phong.maphong
     INNER JOIN nguoidung ON muonphong.manguoidung = nguoidung.manguoidung
     WHERE muonphong.mamuonphong LIKE '$search%' and muonphong.trangthai = '1'
-    or phong.maphong LIKE '$search%' and muonphong.trangthai = '1'
-    or nguoidung.ten LIKE '$search%' and muonphong.trangthai = '1'
-    or '$search' BETWEEN muonphong.ngaymuon and muonphong.ngaytra";
+    or phong.maphong LIKE '%$search%' and muonphong.trangthai = '1'
+    or nguoidung.ten LIKE '%$search%' and muonphong.trangthai = '1'
+    or '$search' BETWEEN muonphong.ngaymuon and muonphong.ngaytra and muonphong.trangthai = '1'";
     $result = $conn->query($sql);
 }
 ?>

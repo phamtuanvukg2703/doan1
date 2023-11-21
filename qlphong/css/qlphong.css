@@ -73,7 +73,7 @@ body{
 .add-search > a {
     color: white;
     background-color: #0ea5e9;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
 }
 .add-search input {
@@ -95,8 +95,8 @@ body{
 }
 
 img {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     border-radius: 10px;
 
 }

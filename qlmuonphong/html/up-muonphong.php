@@ -1,16 +1,15 @@
 <?php
 require_once("/xampp/htdocs/doan1/php/conn.php");
+require_once('/xampp/htdocs/doan1/php/func.php');
 $conn = connectDB();
+//lấy id
 $id = $_GET['id'];  
 $sql = "SELECT * FROM muonphong where mamuonphong ='$id'";
 $result = mysqli_query($conn, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
-    $mamuonphong =$row['mamuonphong'];
-    $manguoidung =$row['manguoidung'];
-    $maphong =$row['maphong'];
-    $ngaymuon =$row['ngaymuon'];
-    $ngaytra =$row['ngaytra'];
-}
+$row = mysqli_fetch_assoc($result);
+$phongs = getPhongOptions($row['maphong']);
+$nguoidungs = getNguoidungOptions($row['manguoidung']);
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,20 +27,24 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class ="container">
                 <div class ="ip">
                     <div class = "manguoidung">
-                        <label for="manguoidung">Mã người dùng:</label>
-                        <input type="text" name="manguoidung" id="manguoidung"value ="<?php echo $manguoidung ?>">
+                        <label for="manguoidung">Tên người dùng:</label>
+                        <select name="manguoidung">
+                            <?php echo $nguoidungs ?>
+                        </select>
                     </div>
                     <div class = "maphong">
-                        <label for="maphong">Mã phòng:</label>
-                        <input type="text" name="maphong" id="maphong"value ="<?php echo $maphong ?>">
+                        <label for="maphong">Tên phòng:</label>
+                        <select name="maphong">
+                            <?php echo $phongs ?>
+                        </select>
                     </div>
                     <div class = "ngaymuon">
                         <label for="ngaymuon">Ngày mượn:</label>
-                        <input type="date" name="ngaymuon" id="ngaymuon" value ="<?php echo $ngaymuon ?>">
+                        <input type="date" name="ngaymuon" id="ngaymuon" value ="<?php echo $row['ngaymuon'] ?>">
                     </div>
                     <div class = "ngaytra">
-                        <label for="ngaytra">Ngày mượn:</label>
-                        <input type="date" name="ngaytra" id="ngaytra" value ="<?php echo $ngaytra ?>">
+                        <label for="ngaytra">Ngày trả:</label>
+                        <input type="date" name="ngaytra" id="ngaytra" value ="<?php echo $row['ngaytra'] ?>">
                     </div>
                 </div>
                 <div class ="sub_update">

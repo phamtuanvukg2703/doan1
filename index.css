@@ -14,11 +14,10 @@ body{
     display: flex;
 }
 .menu h2{
-    color: #4f46e5;
+    color: white;
     padding: 5px 10px;
     display: block;
     font-size: 1.5em;
-    background-color: #c7d2fe;
 }
 .menu ul {
     background-color: #1e293b;
