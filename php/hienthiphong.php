@@ -1,6 +1,6 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = "SELECT p.maphong, p.tenphong, p.hinh, k.tenkhu, p.trangthai FROM phong p, khu k WHERE p.makhu = k.makhu and p.trangthaixoa = '1' and k.trangthai = '1' ";
+$sqlSelectAll = "SELECT p.maphong, p.tenphong, p.hinh, k.tenkhu, p.trangthai FROM phong p, khu k WHERE p.makhu = k.makhu and p.trangthaixoa = '1'";
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

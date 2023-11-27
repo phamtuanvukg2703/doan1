@@ -1,6 +1,6 @@
 <?php
 $conn = connectDB();
-$sqlSelectAll = 'SELECT * FROM muonphong INNER JOIN phong ON muonphong.maphong = phong.maphong INNER JOIN nguoidung ON muonphong.manguoidung = nguoidung.manguoidung where muonphong.trangthai = "1" and phong.trangthaixoa = "1" and nguoidung.trangthai =  "1"';
+$sqlSelectAll = 'SELECT * FROM muonphong INNER JOIN phong ON muonphong.maphong = phong.maphong INNER JOIN nguoidung ON muonphong.manguoidung = nguoidung.manguoidung where muonphong.trangthai = "1"';
 $result = mysqli_query($conn,$sqlSelectAll);
 $data = [];
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
