@@ -1,14 +1,12 @@
 <?php
 require_once("/xampp/htdocs/doan1/php/conn.php");
+require_once("/xampp/htdocs/doan1/php/func.php");
 $conn = connectDB();
 $id = $_GET['id'];  
 $sql = "SELECT * FROM phong where maphong ='$id'";
 $result = mysqli_query($conn, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
-    $makhu =$row['makhu'];
-    $maphong =$row['maphong'];
-    $tenphong =$row['tenphong'];
-}
+$row = mysqli_fetch_assoc($result);
+$makhus = getKhuOptions($row['makhu']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,18 +25,20 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class ="ip">
                     <div class = "Makhu">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="makhu" id="makhu" value ="<?php echo $makhu ?>">
+                        <select name="makhu">
+                            <?php echo $makhus ?>
+                        </select>
                     </div>
                     <div class = "Maphong">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="maphong" id="maphong" value ="<?php echo $maphong ?>" readonly>
+                        <input type="text" name="maphong" id="maphong" value ="<?php echo $row['maphong'] ?>" readonly>
                     </div>
                     <div class = "Tenphong">
                         <!--Dữ liệu từ sql có sẵn muốn chỉnh sửa-->
-                        <input type="text" name="tenphong" id="tenphong" value ="<?php echo $tenphong ?>">
+                        <input type="text" name="tenphong" id="tenphong" value ="<?php echo $row['tenphong'] ?>">
                     </div>
                     <div class = "hinh">
-                        <input type="file" name="hinh" id="hinh" value ="<?php echo $hinh ?>">
+                        <input type="file" name="hinh" id="hinh" value ="<?php echo $row['hinh'] ?>">
                     </div>  
                 </div>
                 <div class ="sub_update">

@@ -15,6 +15,18 @@
         $sql = "SELECT * FROM phong WHERE trangthaixoa = '1'";
         return mysqli_query($conn, $sql);
     };
+    //update combobox khu
+    function getKhuOptions($selectedMakhu){
+        global $conn;
+        $sql = "SELECT makhu, tenkhu FROM khu where trangthai = 1";
+        $result = $conn->query($sql);
+        $options = "";
+        while ($row = $result->fetch_assoc()) {
+            $isSelected = ($row['makhu'] == $selectedMakhu) ? "selected" : "";
+            $options .= "<option value='{$row['makhu']}' $isSelected>{$row['tenkhu']}</option>";
+        }
+        return $options;
+    }
     //update combobox phòng
     function getPhongOptions($selectedMaphong) {
         global $conn;
